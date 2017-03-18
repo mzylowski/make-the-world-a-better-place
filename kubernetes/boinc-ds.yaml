@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: boinc-ds
+spec:
+  template:
+    metadata:
+      name: boinc-po
+      labels:
+        daemon: boinc-po
+    spec:
+      containers:
+      - name: boinc
+        image: rsmitty/boinc
+        env:
+           - name: boincurl
+             value: "www.worldcommunitygrid.org"
+           - name: boinckey
+             value: "YOUR_KEY_COPIED_FROM:www.worldcommunitygrid.org"
