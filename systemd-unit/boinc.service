@@ -1,0 +1,18 @@
+[Unit]
+Description=Boinc client in docker 
+Requires=docker.service
+After=docker.service
+
+[Service]
+ExecStart=/usr/bin/docker run \
+        --restart=always \
+        --name wcg \
+        -e "boincurl=www.worldcommunitygrid.org" \
+        -e "boinckey=YOUR_KEY_COPIED_FROM:www.worldcommunitygrid.org" \
+        rsmitty/boinc
+ExecStop=/usr/bin/docker stop -t 2 wcg
+ExecStopPost=/usr/bin/docker rm -f wcg
+Restart=always
+RestartSec=10
+[Install]
+WantedBy=multi-user.target
