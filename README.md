@@ -19,7 +19,7 @@ curl -fsSL https://get.docker.com/ | sh
 ### Non-Tldr - I have few minutes more :)
 1. Create account on worldcommunitygrid.org and copy your Account Key or Weak Account Key form Settings > My Profile section.
 2. Deploy worldcommunitygrid.org client on your computer/cluster in your favorite way:
-* Pure docker command (the easiest way)
-* Docker container managed via systemd
-* k8s daemon set (via Kubernetes cluster)
-* Mesos job (via Marathon framework)
+* [Pure docker command](https://github.com/mzylowski/make-the-world-a-better-place/tree/master/pure-docker) (the easiest way)
+* [Docker container managed via systemd](https://github.com/mzylowski/make-the-world-a-better-place/tree/master/systemd-unit)
+* [k8s daemon set](https://github.com/mzylowski/make-the-world-a-better-place/tree/master/kubernetes) (via Kubernetes cluster)
+* [Mesos job](https://github.com/mzylowski/make-the-world-a-better-place/tree/master/mesos-marathon) (via Marathon framework)
