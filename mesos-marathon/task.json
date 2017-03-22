@@ -1,0 +1,28 @@
+{
+  "id": "good-thing",
+  "cmd": null,
+  "cpus": CHANGE_ME:CPU,
+  "mem": CHANGE_ME:RAM,
+  "disk": 0,
+  "constraints": [["hostname", "UNIQUE"]],
+  "instances": CHANGE_ME:MESOS_AGENT_COUT,
+  "env": {
+    "boincurl": "www.worldcommunitygrid.org",
+    "boinckey": "YOUR_KEY_COPIED_FROM:www.worldcommunitygrid.org"
+  },  
+  "container": {
+    "docker": {
+      "image": "rsmitty/boinc",
+      "network": "HOST"
+    },
+    "type": "DOCKER"
+  },
+  "portDefinitions": [
+    {
+      "port": 0,
+      "protocol": "tcp",
+      "name": null,
+      "labels": null
+    }
+  ]
+}
