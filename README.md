@@ -1,12 +1,25 @@
 ## Make the world a better place by volunteering grid computing
-TODO
+In this repository yuo can find instructions, how to join to volunteering computing via worldcommunitygrid.org, by running only one docker container on your node.
+If you have cluster with unused resources, or even only one machine, you can help fight with cancer, AIDS etc.
+The OS doesn't matter - there is only one requirement: Docker installed on the system.
+All solutions based on [rsmitty/boinc docker image](https://rsmitty.github.io/Containerizing-The-Grid/).
 
-### Tldr
+### Tldr - I don't have time, but I want help
 Just do the command on your node with docker:
 ```
 docker run --restart=always -d --name wcg -e "boincurl=www.worldcommunitygrid.org" -e "boinckey=1033877_ca3e3556f2fcafbb8edc82447e16b58c" rsmitty/boinc
 ```
-If you don't have docker just install by:
+That's all!
+
+If you don't have docker yet, just install by:
 ```
 curl -fsSL https://get.docker.com/ | sh
 ```
+
+### Non-Tldr - I have few minutes more :)
+1. Create account on worldcommunitygrid.org and copy your Account Key or Weak Account Key form Settings > My Profile section.
+2. Deploy worldcommunitygrid.org client on your computer/cluster in your favorite way:
+* Pure docker command (the easiest way)
+* Docker container managed via systemd
+* k8s daemon set (via Kubernetes cluster)
+* Mesos job (via Marathon framework)
