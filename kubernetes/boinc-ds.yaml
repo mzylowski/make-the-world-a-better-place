@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: v1
 kind: DaemonSet
 metadata:
   name: boinc-ds
@@ -16,4 +16,4 @@ spec:
            - name: boincurl
              value: "www.worldcommunitygrid.org"
            - name: boinckey
-             value: "YOUR_KEY_COPIED_FROM:www.worldcommunitygrid.org"
+             value: "000e89b76d18021f4d6d0afe72fff27a"
